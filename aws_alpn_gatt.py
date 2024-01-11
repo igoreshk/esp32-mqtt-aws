@@ -24,15 +24,15 @@ from bluepy import btle
 
 IoT_protocol_name = "x-amzn-mqtt-ca"
 
-aws_iot_endpoint = "a30akenxd5gyvv-ats.iot.eu-central-1.amazonaws.com"
+aws_iot_endpoint = "endpoint.amazonaws.com"
 
-url = "https://a30akenxd5gyvv-ats.iot.eu-central-1.amazonaws.com".format(aws_iot_endpoint)
+url = "https://endpoint.amazonaws.com".format(aws_iot_endpoint)
 
-ca = "/home/pi/Downloads/PAHO/crt/Amazon-root-CA-1.pem"
+ca = "path/Amazon-root-CA-1.pem"
 
-cert = "/home/pi/Downloads/PAHO/crt/device.pem.crt"
+cert = "path/crt/device.pem.crt"
 
-private = "/home/pi/Downloads/PAHO/crt/private.pem.key"
+private = "path/crt/private.pem.key"
 
 logger = logging.getLogger()
 
@@ -56,11 +56,11 @@ MQTT_CLIENT_ID = 'edge-01'
 
 #MQTT_SERVER = 'edgeserver-01'
 
-#MQTT_USER = 'edge-01'
+#MQTT_USER = 'username'
 
-#MQTT_PASSWORD = 'ble_gateway'
+#MQTT_PASSWORD = 'pass'
 
-DEIVCE_BTLE_ADDRESS = '30:ae:a4:9c:c8:02'
+DEIVCE_BTLE_ADDRESS = 'mac this bt device'
 
 DEVICE_BATTERY_SERVICE_UUID = btle.UUID('180f')
 
