@@ -64,24 +64,29 @@
 
 ### 1. Подготовка окружения
 
-# Установите Arduino IDE или PlatformIO с поддержкой плат ESP32
-# Для PlatformIO:
+ Установите Arduino IDE или PlatformIO с поддержкой плат ESP32
+ Для PlatformIO:
 pio platform install espressif32
 
-### 2. Настройка AWS
-#Зарегистрируйте "Вещь" (Thing) в сервисе AWS IoT Core
-#Сгенерируйте и скачайте сертификаты устройства (X.509)
-#Прикрепите необходимую политику доступа (IAM Policy)
+#### 2. Настройка AWS
+'Зарегистрируйте "Вещь" (Thing) в сервисе AWS IoT Core
+Сгенерируйте и скачайте сертификаты устройства (X.509)
+Прикрепите необходимую политику доступа (IAM Policy)'
 
 ### 3. Настройка устройства
-# 1. Настройте параметры WiFi в коде:
+#### 1. Настройте параметры WiFi в коде:
+
 const char* ssid = "ВАШ_SSID";
 const char* password = "ВАШ_ПАРОЛЬ";
-# 2. Добавьте данные AWS:
+
+#### 2. Добавьте данные AWS:
+
 const char* awsEndpoint = "ваш-эндпоинт.iot.регион.amazonaws.com";
 const char* certificate = R"EOF(-----BEGIN CERTIFICATE----- ...)EOF";
 const char* privateKey = R"EOF(-----BEGIN RSA PRIVATE KEY----- ...)EOF";
-### 4. Прошивка и запуск
+
+#### 4. Прошивка и запуск
+
 Скомпилируйте проект в Arduino IDE или PlatformIO
 Загрузите прошивку на плату ESP32
 Мониторьте вывод через Serial Monitor (115200 baud)
